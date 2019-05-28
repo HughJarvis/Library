@@ -10,6 +10,7 @@ public class Library {
         this.capacity = capacity;
     }
 
+
     public int getNumberOfBooks() {
         return this.collection.size();
     }
@@ -18,5 +19,9 @@ public class Library {
         if (this.collection.size() < this.capacity) {
             this.collection.add(book);
         }
+    }
+
+    public void lendBook(Book book) {
+        this.collection.remove(book);
     }
 }

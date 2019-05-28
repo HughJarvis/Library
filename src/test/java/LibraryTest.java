@@ -42,9 +42,15 @@ public class LibraryTest {
     }
 
     @Test
-    public void cantAddBookToCollectionIfFull(){
+    public void cannotAddBookToCollectionIfFull(){
         library.addBookToCollection(book4);
         library.addBookToCollection(book5);
         assertEquals(5, library.getNumberOfBooks());
+    }
+
+    @Test
+    public void canLendBook(){
+        library.lendBook(book2);
+        assertEquals(3, library.getNumberOfBooks());
     }
 }
